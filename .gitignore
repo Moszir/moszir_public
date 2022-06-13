@@ -1,5 +1,13 @@
+# IDE Settings
 .idea
 .vscode
+
+# Archived code
 archives
+
+# C++ build folders
 build*
 cmake-build*
+
+# Java compiled classes
+*.class
