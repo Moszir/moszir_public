@@ -9,5 +9,6 @@ archives
 build*
 cmake-build*
 
-# Java compiled classes
+# Java
 *.class
+java/coverage/

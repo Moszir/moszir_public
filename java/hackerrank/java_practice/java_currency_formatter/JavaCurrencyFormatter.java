@@ -41,27 +41,14 @@
  * The other two options, Java 8, and 15 use '₹' for rupees, and '¥' for yen.
  */
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.text.NumberFormat;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class JavaCurrencyFormatter
 {
-    public static void main(String[] args)
-    {
-        Scanner scanner = new Scanner(System.in);
-        final var payment = scanner.nextDouble();
-        scanner.close();
-
-        // Write your code here.
-        final var formattedCurrencies = getFormattedCurrencies(payment);
-
-        System.out.println("US: " + formattedCurrencies[0]);
-        System.out.println("India: " + formattedCurrencies[1]);
-        System.out.println("China: " + formattedCurrencies[2]);
-        System.out.println("France: " + formattedCurrencies[3]);
-    }
-
     /**
      * Utility function for getting the formatted currency strings the problem asks to print out.
      * The class can thus be tested on this function.
@@ -69,7 +56,8 @@ public class JavaCurrencyFormatter
      * @param payment The numerical amount to be formatted.
      * @return The currency formatted in the specified locales (in an array).
      */
-    public static String[] getFormattedCurrencies(final double payment)
+    @Contract("_ -> new")
+    public static String @NotNull [] getFormattedCurrencies(final double payment)
     {
         return new String[]{
             formatCurrency(Locale.US, payment),
