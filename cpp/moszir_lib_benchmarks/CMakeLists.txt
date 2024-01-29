@@ -1,0 +1,2 @@
+add_executable(string_vector_benchmark "string_vector_benchmark.cpp")
+target_link_libraries(string_vector_benchmark benchmark::benchmark moszir_lib)
