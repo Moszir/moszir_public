@@ -21,19 +21,19 @@ const std::vector<int> oneToFive{1, 2, 3, 4, 5};
  *     UnaryOperation op);
  * ```
  *
- * - [first, last) is the input range
- * - result is the output iterator
- * - op is the unary operation to apply to each element
+ * - [first, last) is the input range.
+ * - result is the output iterator.
+ * - op is the unary operation to apply to each element.
  *
  * _Return value_: an iterator to the element past the last element written in the output range
  * In other words: where the next element would go, if we continued writing to the output range.
  *
- * _Complexity_: exactly `last - first` applications of `op`
+ * _Complexity_: exactly `last - first` applications of `op`.
  *
  * @warning The output container must be large enough to hold all the elements,
  * or a special iterator must be used (see below).
  *
- * @warning `std::transform` does not guarantee that the
+ * @warning `std::transform` does not guarantee that the operation is applied in order.
  */
 
 
